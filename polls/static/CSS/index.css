@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(150, 120, 110);
+
+}
+
+.nav{
+    width: 100%;
+    display:inline-flex;
+    padding: 2rem;
+    background: burlywood;
+    list-style: none;
+    color: rgb(15, 51, 51);
+    
+}
+.nav li{
+    padding-left: 3rem;
+    cursor: pointer;
+}
+
+.question{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.link{
+    list-style: none;
+    font-style: normal;
+    
+}
+a {
+    text-decoration: solid;
+    color: rgb(83, 175, 118);
+}

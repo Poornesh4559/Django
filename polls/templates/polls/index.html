@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li id="home" href="home.html">HOME</li>
+            <li id="projects" href="projects.html">PROJETCS</li>
+            <li id="about" href="about.html">ABOUT</li>
+            <li id="contact" href="contact.html">CONTACT</li>
+        </ul>
+       <div class="question">
+        {% if latest_question_list %}
+        <ul>
+        {% for question in latest_question_list %}
+        <li class = "link"><a  href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>No polls are available.</p>
+        {% endif %}
+       </div>
+    </div>
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
